@@ -1,5 +1,6 @@
+
 import React, { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+
 
 const API_KEY = process.env.REACT_APP_YOUTUBE_API_KEY || 'YOUR_PLACEHOLDER_API_KEY';
 
@@ -38,7 +39,7 @@ function TrendingVideos({ isSearch }) {
 
   return (
     <>
-      <h2 style={{textAlign: 'center', color: '#fff', marginTop: '1rem', fontWeight: 700}}>Trending Songs in India</h2>
+      <h2 style={{textAlign: 'center', color: '#fff', marginTop: '1rem', fontWeight: 700}}>India’s Top Trending Videos</h2>
       <div className="trending-grid">
         {videos.map((video) => {
           const id = isSearch ? video.id?.videoId : video.id;
